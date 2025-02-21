@@ -1,7 +1,7 @@
 # Django_API
 API en Django
 Este proyecto es una API RESTful construida con Django y Django REST Framework (DRF).
-
+La API maneja la gestión de tareas para usuarios con manejo de JWT.
 
 # **Instrucciones para la instalación de la API**
 ## Clonación del projecto
@@ -42,7 +42,7 @@ Dependencias que se descargaran con requirements.txt:<br>
 
 # **Para ejecutar la API**
 - Para poner en marcha la api, en el directorio raiz del proyecto se ejecuta el comando: ```python manage.py runserver```
-- Para revisar el resuultado de los test ejecuta el comando: ```python manage.py test```
+- Para revisar el resultado de los test ejecuta el comando: ```python manage.py test```
 
 # **Para probar el funcionamiento de la api**
 No tiene una interfaz gráfica como tal, sin embargo utilizo la proporcionada por DRF para probar los endpoints.<br>
