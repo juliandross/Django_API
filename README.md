@@ -3,13 +3,19 @@ API en Django
 Este proyecto es una API RESTful construida con Django y Django REST Framework (DRF).
 
 
-**Instrucciones para la instalación de la API**
-##Clonación del projecto
+# **Instrucciones para la instalación de la API**
+## Clonación del projecto
 Para clonar el proyeco ejecuta en la carpeta de tu preferencia:
-git clone https://github.com/juliandross/Django_API.git
+```git clone https://github.com/juliandross/Django_API.git```
 
-##Requisitos previos:
-Asegúrate de tener instalado:
+## Si no tienes python instalado
+En la terminal ejecuta: python
+Para verificar si python se instaló correctamente entonces ejecuta este comando: ```python --version```
+
+## Instalación de requerimientos del proyecto 
+Con este comando podrás ejecutar las dependencias de la API: ```pip install -r requirements.txt```
+
+Dependencias que se descargaran con requirements.txt:<br>
 
 - Python 3.11.6
 - asgiref==3.8.1
@@ -34,61 +40,58 @@ Asegúrate de tener instalado:
 - tzdata==2025.1
 - uritemplate==4.1.1
 
-##Si no los tienes instalados entonces en el directorio del proyecto ejecuta():
-pip install -r requirements.txt
+# **Para ejecutar la API**
+- Para poner en marcha la api, en el directorio raiz del proyecto se ejecuta el comando: ```python manage.py runserver```
+- Para revisar el resuultado de los test ejecuta el comando: ```python manage.py test```
 
-**Para ejecutar la API**
--Para poner en marcha, en el directorio raiz del proyecto se ejecuta el comando: python manage.py runserver
--Para revisar el resuultado de los test ejecuta el comando: python manage.py runserver
-
-**Para probar el funcionamiento de la api**
-No tiene una interfaz gráfica como tal, sin embargo utilizo la proporcionada por DRF para probar los endpoints.
-Así que todo los servicios ofrecidos por la api deberan ser consultados en un navegador en localhost:8000
-primero el usuario deberá registrarse: localhost:8000/api/register
-Luego del registro puede hacer el login en el boton login de la esquina superior derecha
+# **Para probar el funcionamiento de la api**
+No tiene una interfaz gráfica como tal, sin embargo utilizo la proporcionada por DRF para probar los endpoints.<br>
+Así que todo los servicios ofrecidos por la api deberan ser consultados en un navegador en ```localhost:8000.```<br>
+Primero el usuario deberá registrarse: ```localhost:8000/api/register.```<br>
+Luego del registro puede hacer el login en el boton login de la esquina superior derecha<br>
 Una vez registrado y logeado podrá acceder a los diferentes endpoints que tiene la API:
-#Consultar una tarea en especifico
--localhost:8000/api/task/{id}
-#Consultar todas las tareas del usuario
--localhost:8000/api/task
-#Agregar una tarea
--localhost:8000/api/task (En la parte inferior de la pantalla se mostrara el formulario)
-#Modificar una tarea
--localhost:8000/api/task/{id} (En la parte inferior de la pantalla se mostrara el formulario)
-#Eliminar una tarea
--localhost:8000/api/task/{id} (En la parte inferior de la pantalla se mostrara el formulario)
+### Consultar una tarea en especifico
+```- localhost:8000/api/task/{id}```
+### Consultar todas las tareas del usuario
+```- localhost:8000/api/task```
+### Agregar una tarea
+-``` localhost:8000/api/task (En la parte inferior de la pantalla se mostrara el formulario)```
+### Modificar una tarea
+```- localhost:8000/api/task/{id} (En la parte inferior de la pantalla se mostrara el formulario)```
+### Eliminar una tarea
+```- localhost:8000/api/task/{id} (En la parte inferior de la pantalla se mostrara el formulario)```
 
-**Documentación**
-Para revisar la documentación puede hacerlo con
--localhost:8000/api/doc
+# **Documentación**
+Para revisar la documentación puede hacerlo con<br>
+```- localhost:8000/api/doc```
 o también con
--localhost:8000/api/redoc
+```- localhost:8000/api/redoc```
 
-**Nota importante**
+## **Nota importante**
 Ya hay datos precargados para hacer algunas pruebas
-#Usuario
+### Usuario
 Nombre: usuario1 - Contraseña: 123456
-#Tareas
--1
+#### Tareas
+-1<br>
 "id": 3,
-"title": "tituloBonitoModificado",
--2
+"title": "tituloBonitoModificado"
+-2<br>
 "id": 5,
 "title": "otroTitulo"
 
-#Usuario
+### Usuario
 Nombre: usuario2 - Contraseña: 12345678
-#Tareas
--1
+#### Tareas
+-1<br>
 "id": 4,
-"title": "tareaDelUsuario2",
+"title": "tareaDelUsuario2"
 
-#Usuario
+#### Usuario
 Nombre: admin - Contraseña 1234
-#Tareas
--1
+#### Tareas
+-1<br>
 "id": 1,
-"title": "titulo1",
--2
+"title": "titulo1"
+-2<br>
 "id": 2,
-"title": "titulo12",
+"title": "titulo12"
