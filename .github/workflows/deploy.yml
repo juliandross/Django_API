@@ -16,7 +16,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
-          python-version: 'Python 3.11.9'  
+          python-version: 'Python 3.11'  
 
       - name: Instalar dependencias
         run: |
@@ -37,4 +37,4 @@ jobs:
 
       - name: Correr servidor Django
         run: |
-          nohup python manage.py runserver 0.0.0.0:8093 &
+          nohup python manage.py runserver 0.0.0.0:8000 &
