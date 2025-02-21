@@ -14,9 +14,33 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+#imports propios de urls y superusuario
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include 
+#imports de swagger
+from django.urls import re_path
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+#swagger
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Django-API",
+        default_version='v1',
+        description="API en Django con autenticación por tokens o JWT. CRUD de tareas: GET/POST /tasks/, GET/PUT/DELETE /tasks/id/. Solo el creador puede modificar o eliminar.",
+        terms_of_service="https://mit-license.org/",
+        contact=openapi.Contact(email="julianalejandromunoz49@gmail.com"),
+        license=openapi.License(name="MIT License"),
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+    #path de swagger
+    path('doc/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

@@ -8,9 +8,9 @@ class Task(models.Model):
         max_length=80,
         blank=False,
         null=False,
-        validators=[MinLengthValidator(4, message="El título debe tener al menos 4 caracteres.")]
+        validators=[MinLengthValidator(3, message="El título debe tener al menos 4 caracteres.")]
     )
-    description = models.PositiveIntegerField(max_length=300, blank=True, null=True)
+    description = models.CharField(max_length=300,blank=True, null=True)
     completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(
