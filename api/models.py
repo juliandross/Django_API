@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator
-
+#Clase tarea (modelo principal de la aplicación)
 class Task(models.Model):
     id = models.AutoField(primary_key=True, blank=False, null=False)
     title = models.CharField(
